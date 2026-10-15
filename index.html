@@ -25,7 +25,7 @@
 }
 html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px);scroll-behavior:smooth}
 *,*::before,*::after{box-sizing:inherit}
-body{margin:0;background:var(--black);color:var(--paper);font-family:var(--body);font-size:1.125rem;line-height:1.55;-webkit-font-smoothing:antialiased}
+body{margin:0;background:var(--paper);color:var(--black);font-family:var(--body);font-size:1.125rem;line-height:1.55;-webkit-font-smoothing:antialiased}
 img{max-width:100%;display:block}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
@@ -39,18 +39,18 @@ p{margin:0 0 1em}
 /* buttons */
 .btn{display:inline-block;font-family:var(--display);font-size:1.45rem;letter-spacing:.06em;text-decoration:none;padding:.55rem 1.4rem .4rem;border:3px solid var(--yellow);background:var(--yellow);color:var(--black);cursor:pointer;transition:background .15s,color .15s}
 .btn:hover{background:var(--black);color:var(--yellow)}
-.btn.ghost{background:transparent;color:var(--yellow)}
-.btn.ghost:hover{background:var(--yellow);color:var(--black)}
+.btn.ghost{background:transparent;color:var(--black);border-color:var(--black)}
+.btn.ghost:hover{background:var(--black);color:var(--yellow);border-color:var(--black)}
 .on-yellow .btn{background:var(--black);border-color:var(--black);color:var(--yellow)}
 .on-yellow .btn:hover{background:transparent;color:var(--black)}
 
 /* nav */
-.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--black);border-bottom:3px solid var(--yellow)}
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--paper);border-bottom:3px solid var(--black)}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.5rem 0}
 .nav img{height:52px;width:auto}
 .nav ul{display:flex;gap:1.6rem;list-style:none;margin:0;padding:0}
-.nav ul a{font-family:var(--display);font-size:1.3rem;letter-spacing:.06em;text-decoration:none}
-.nav ul a:hover{color:var(--yellow)}
+.nav ul a{font-family:var(--display);font-size:1.3rem;letter-spacing:.06em;text-decoration:none;border-bottom:3px solid transparent}
+.nav ul a:hover{border-bottom-color:var(--yellow)}
 .nav .btn{font-size:1.2rem;padding:.4rem 1rem .25rem}
 @media(max-width:820px){.nav ul{display:none}}
 
@@ -61,7 +61,7 @@ p{margin:0 0 1em}
 .hero-copy .mark{width:min(270px,60%);margin-bottom:1.6rem}
 .hero-copy p{font-size:1.35rem;max-width:30ch}
 .hero-copy .actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.4rem}
-.stack{--u:clamp(2.6rem,5.4vw,4.4rem);font-family:var(--brush);color:var(--yellow);text-transform:uppercase;line-height:.92;margin:0}
+.stack{--u:clamp(2.6rem,5.4vw,4.4rem);font-family:var(--brush);color:var(--black);text-transform:uppercase;line-height:.92;margin:0}
 .stack span{display:block;transform-origin:left bottom}
 .stack .b{font-size:calc(var(--u)*1.75)}
 .stack .w1{font-size:calc(var(--u)*1.2)}
@@ -100,12 +100,12 @@ section{padding:clamp(3.5rem,8vw,6.5rem) 0}
 .tri svg{width:100%;max-width:440px;margin-inline:auto;display:block;overflow:visible}
 .tri .side{stroke:#8d8d88;stroke-width:9;stroke-linecap:round;fill:none;transition:stroke .2s}
 .tri .side.on{stroke:var(--yellow)}
-.tri text{font-family:var(--display);font-size:32px;letter-spacing:2px;fill:var(--paper);transition:fill .2s}
+.tri text{font-family:var(--display);font-size:32px;letter-spacing:2px;fill:var(--black);transition:fill .2s}
 .tri text.on{fill:var(--yellow)}
 .tabs{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.4rem}
-.tabs button{all:unset;cursor:pointer;font-family:var(--display);font-size:2.2rem;line-height:1.1;letter-spacing:.03em;padding:.35rem .8rem .2rem;border-left:6px solid var(--line);color:#a9a9a4}
-.tabs button:hover{color:var(--paper)}
-.tabs button[aria-selected="true"]{color:var(--yellow);border-left-color:var(--yellow)}
+.tabs button{all:unset;cursor:pointer;font-family:var(--display);font-size:2.2rem;line-height:1.1;letter-spacing:.03em;padding:.35rem .8rem .2rem;border-left:6px solid var(--line);color:var(--slate)}
+.tabs button:hover{color:var(--black)}
+.tabs button[aria-selected="true"]{color:var(--black);border-left-color:var(--yellow)}
 .tabs button:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
 .tabpanel{min-height:8.5rem;font-size:1.25rem;max-width:36ch}
 
@@ -126,14 +126,14 @@ section{padding:clamp(3.5rem,8vw,6.5rem) 0}
 @media(min-width:900px){.guide .grid{grid-template-columns:5fr 7fr}}
 details{border-top:3px solid var(--line);padding:0}
 details:last-of-type{border-bottom:3px solid var(--line)}
-summary{list-style:none;cursor:pointer;font-family:var(--brush);font-size:1.6rem;padding:1rem 2.6rem 1rem 0;position:relative;color:var(--paper)}
+summary{list-style:none;cursor:pointer;font-family:var(--brush);font-size:1.6rem;padding:1rem 2.6rem 1rem 0;position:relative;color:var(--black)}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";position:absolute;right:.3rem;top:50%;transform:translateY(-52%);font-family:var(--display);font-size:2.4rem;color:var(--yellow);transition:transform .2s}
-details[open] summary{color:var(--yellow)}
+summary::after{content:"+";position:absolute;right:.3rem;top:50%;transform:translateY(-52%);font-family:var(--display);font-size:2.4rem;color:var(--black);transition:transform .2s}
+details[open] summary{color:var(--black);border-left:6px solid var(--yellow);padding-left:.9rem}
 details[open] summary::after{content:"\2212"}
 details .body{padding:0 0 1.4rem;max-width:56ch;font-style:italic}
 details .traits{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0 0;padding:0;list-style:none;font-style:normal}
-details .traits li{font-family:var(--brush);border:3px solid var(--yellow);color:var(--yellow);padding:.1rem .8rem}
+details .traits li{font-family:var(--brush);border:3px solid var(--black);color:var(--black);padding:.1rem .8rem}
 
 /* coach */
 .coach .grid{display:grid;gap:2.5rem;align-items:center}
@@ -146,13 +146,13 @@ details .traits li{font-family:var(--brush);border:3px solid var(--yellow);color
 .contact .grid{display:grid;gap:3rem}
 @media(min-width:900px){.contact .grid{grid-template-columns:5fr 6fr}}
 form{display:grid;gap:1.2rem}
-label,legend{font-family:var(--display);font-size:1.4rem;letter-spacing:.05em;color:var(--yellow);padding:0}
-input[type=text],input[type=email],textarea{width:100%;font:inherit;color:var(--paper);background:var(--coal);border:3px solid var(--line);padding:.7rem .9rem;border-radius:0}
+label,legend{font-family:var(--display);font-size:1.4rem;letter-spacing:.05em;color:var(--black);padding:0}
+input[type=text],input[type=email],textarea{width:100%;font:inherit;color:var(--black);background:#fff;border:3px solid var(--black);padding:.7rem .9rem;border-radius:0}
 input[type=text]:focus,input[type=email]:focus,textarea:focus{border-color:var(--yellow);outline:none}
 textarea{min-height:9rem;resize:vertical}
 fieldset{border:0;margin:0;padding:0}
 .checks{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.4rem}
-.checks label{font-family:var(--body);font-size:1.05rem;letter-spacing:0;color:var(--paper);cursor:pointer}
+.checks label{font-family:var(--body);font-size:1.05rem;letter-spacing:0;color:var(--black);cursor:pointer}
 .checks input{position:absolute;opacity:0;pointer-events:none}
 .checks span{display:inline-block;border:3px solid var(--line);padding:.35rem 1rem}
 .checks input:checked + span{background:var(--yellow);border-color:var(--yellow);color:var(--black);font-weight:800}
@@ -160,10 +160,11 @@ fieldset{border:0;margin:0;padding:0}
 .status{min-height:1.6em;font-weight:600;margin:0}
 .status.err{color:#ff8a7a}
 
-footer{border-top:3px solid var(--yellow);padding:2.4rem 0}
+footer{border-top:3px solid var(--black);padding:2.4rem 0}
 footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.2rem}
 footer img{height:64px;width:auto}
-footer p{margin:0;font-size:1rem;color:#c9c9c4}
+footer p{margin:0;font-size:1rem;color:var(--slate)}
+footer a{color:var(--black);font-weight:700}
 
 /* work */
 .on-paper .btn{background:var(--black);border-color:var(--black);color:var(--yellow)}
@@ -645,7 +646,7 @@ footer p{margin:0;font-size:1rem;color:#c9c9c4}
           <ul class="traits"><li>Attitude</li><li>Training</li><li>System</li></ul>
         </div>
       </details>
-      <p style="margin-top:1.6rem">Building the people side of your brand can feel confusing. Your people are the engine that drives your business. <a href="#contact" style="color:var(--yellow);font-weight:800">Let us help you.</a></p>
+      <p style="margin-top:1.6rem">Building the people side of your brand can feel confusing. Your people are the engine that drives your business. <a href="#contact" style="color:var(--black);font-weight:800;text-decoration-color:var(--yellow);text-decoration-thickness:3px">Let us help you.</a></p>
     </div>
   </div>
 </section>
