@@ -1,0 +1,781 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Big Ideas Branding | Social media, branding and websites for small business</title>
+<meta name="description" content="Big Ideas Branding helps small businesses with social media strategy, logos, graphics, websites and people culture. Big ideas. Big results. Big personalities.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Mukta:ital,wght@0,400;0,600;0,800;1,400&family=Permanent+Marker&display=swap" rel="stylesheet">
+<style>
+:root{
+  --black:#000;
+  --coal:#12100b;
+  --yellow:#F4F02A;
+  --paper:#F7F7F5;
+  --slate:#5a5a5a;
+  --line:#2b2b2b;
+  --display:"Bebas Neue","Oswald","Arial Narrow",Impact,sans-serif;
+  --brush:"Permanent Marker","Marker Felt","Comic Sans MS",cursive;
+  --body:"Mukta","Segoe UI",system-ui,-apple-system,Arial,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 76px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:inherit}
+body{margin:0;background:var(--black);color:var(--paper);font-family:var(--body);font-size:1.125rem;line-height:1.55;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.on-yellow :focus-visible,.on-paper :focus-visible{outline-color:var(--black)}
+.wrap{width:min(1180px,100% - 2.5rem);margin-inline:auto}
+h1,h2,h3{margin:0;font-weight:400}
+h2{font-family:var(--display);font-size:clamp(2.6rem,6vw,4.6rem);line-height:.95;letter-spacing:.01em}
+h3{font-family:var(--display);font-size:2rem;line-height:1;letter-spacing:.02em}
+p{margin:0 0 1em}
+
+/* buttons */
+.btn{display:inline-block;font-family:var(--display);font-size:1.45rem;letter-spacing:.06em;text-decoration:none;padding:.55rem 1.4rem .4rem;border:3px solid var(--yellow);background:var(--yellow);color:var(--black);cursor:pointer;transition:background .15s,color .15s}
+.btn:hover{background:var(--black);color:var(--yellow)}
+.btn.ghost{background:transparent;color:var(--yellow)}
+.btn.ghost:hover{background:var(--yellow);color:var(--black)}
+.on-yellow .btn{background:var(--black);border-color:var(--black);color:var(--yellow)}
+.on-yellow .btn:hover{background:transparent;color:var(--black)}
+
+/* nav */
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--black);border-bottom:3px solid var(--yellow)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.5rem 0}
+.nav img{height:52px;width:auto}
+.nav ul{display:flex;gap:1.6rem;list-style:none;margin:0;padding:0}
+.nav ul a{font-family:var(--display);font-size:1.3rem;letter-spacing:.06em;text-decoration:none}
+.nav ul a:hover{color:var(--yellow)}
+.nav .btn{font-size:1.2rem;padding:.4rem 1rem .25rem}
+@media(max-width:820px){.nav ul{display:none}}
+
+/* hero */
+.hero{padding:clamp(2rem,5vw,4.5rem) 0 clamp(3rem,6vw,5.5rem);overflow:hidden}
+.hero .wrap{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center}
+@media(min-width:900px){.hero .wrap{grid-template-columns:5fr 6fr;gap:3rem}}
+.hero-copy .mark{width:min(270px,60%);margin-bottom:1.6rem}
+.hero-copy p{font-size:1.35rem;max-width:30ch}
+.hero-copy .actions{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.4rem}
+.stack{--u:clamp(2.6rem,5.4vw,4.4rem);font-family:var(--brush);color:var(--yellow);text-transform:uppercase;line-height:.92;margin:0}
+.stack span{display:block;transform-origin:left bottom}
+.stack .b{font-size:calc(var(--u)*1.75)}
+.stack .w1{font-size:calc(var(--u)*1.2)}
+.stack .w2{font-size:calc(var(--u)*1.0)}
+.stack .w3{font-size:calc(var(--u)*.72)}
+.stack .b:not(:first-child){margin-top:.12em}
+@keyframes slam{0%{opacity:0;transform:translateY(46px) rotate(-3deg) scale(.94)}60%{opacity:1;transform:translateY(-4px) rotate(.4deg) scale(1.01)}100%{opacity:1;transform:none}}
+@media(prefers-reduced-motion:no-preference){
+  .stack span{opacity:0;animation:slam .55s cubic-bezier(.2,.8,.3,1) forwards}
+  .stack span:nth-child(1){animation-delay:.05s}.stack span:nth-child(2){animation-delay:.18s}
+  .stack span:nth-child(3){animation-delay:.42s}.stack span:nth-child(4){animation-delay:.55s}
+  .stack span:nth-child(5){animation-delay:.79s}.stack span:nth-child(6){animation-delay:.92s}
+}
+
+/* yellow sections */
+.on-yellow{background:var(--yellow) url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='600' fill='%23000' fill-opacity='.55'><ellipse cx='336' cy='159' rx='3' ry='1' transform='rotate(18 336 159)'/><ellipse cx='553' cy='101' rx='2.2' ry='1' transform='rotate(129 553 101)'/><ellipse cx='224' cy='43' rx='1.2' ry='2.6' transform='rotate(107 224 43)'/><ellipse cx='76' cy='251' rx='1.2' ry='2.6' transform='rotate(15 76 251)'/><ellipse cx='584' cy='131' rx='1.6' ry='1' transform='rotate(147 584 131)'/><ellipse cx='411' cy='55' rx='1.6' ry='1' transform='rotate(142 411 55)'/><ellipse cx='141' cy='301' rx='3' ry='1.4' transform='rotate(138 141 301)'/><ellipse cx='125' cy='589' rx='2.2' ry='1.4' transform='rotate(26 125 589)'/><ellipse cx='589' cy='197' rx='2.2' ry='1' transform='rotate(140 589 197)'/><ellipse cx='69' cy='582' rx='1.2' ry='1.4' transform='rotate(127 69 582)'/><ellipse cx='549' cy='442' rx='2.2' ry='2.6' transform='rotate(149 549 442)'/><ellipse cx='469' cy='375' rx='2.2' ry='1.4' transform='rotate(46 469 375)'/><ellipse cx='254' cy='88' rx='4.5' ry='2' transform='rotate(134 254 88)'/><ellipse cx='511' cy='356' rx='3' ry='2' transform='rotate(155 511 356)'/><ellipse cx='79' cy='125' rx='4.5' ry='2.6' transform='rotate(42 79 125)'/><ellipse cx='355' cy='160' rx='3' ry='2.6' transform='rotate(10 355 160)'/><ellipse cx='84' cy='576' rx='4.5' ry='2' transform='rotate(87 84 576)'/><ellipse cx='363' cy='513' rx='4.5' ry='2.6' transform='rotate(17 363 513)'/><ellipse cx='100' cy='281' rx='3' ry='1' transform='rotate(15 100 281)'/><ellipse cx='322' cy='461' rx='2.2' ry='2.6' transform='rotate(171 322 461)'/><ellipse cx='360' cy='28' rx='3' ry='2' transform='rotate(43 360 28)'/><ellipse cx='124' cy='510' rx='1.2' ry='1.4' transform='rotate(73 124 510)'/><ellipse cx='137' cy='258' rx='3' ry='2.6' transform='rotate(127 137 258)'/><ellipse cx='87' cy='175' rx='3' ry='2.6' transform='rotate(140 87 175)'/><ellipse cx='289' cy='145' rx='3' ry='2' transform='rotate(180 289 145)'/><ellipse cx='430' cy='372' rx='3' ry='1.4' transform='rotate(38 430 372)'/><ellipse cx='89' cy='185' rx='1.6' ry='1.4' transform='rotate(168 89 185)'/><ellipse cx='243' cy='17' rx='3' ry='1.4' transform='rotate(67 243 17)'/><ellipse cx='293' cy='9' rx='1.6' ry='2.6' transform='rotate(136 293 9)'/><ellipse cx='383' cy='584' rx='2.2' ry='1.4' transform='rotate(176 383 584)'/><ellipse cx='532' cy='60' rx='3' ry='2.6' transform='rotate(101 532 60)'/><ellipse cx='413' cy='408' rx='1.2' ry='2.6' transform='rotate(162 413 408)'/><ellipse cx='415' cy='68' rx='1.6' ry='1' transform='rotate(53 415 68)'/><ellipse cx='456' cy='171' rx='1.2' ry='2' transform='rotate(153 456 171)'/><ellipse cx='58' cy='109' rx='1.2' ry='1.4' transform='rotate(137 58 109)'/><ellipse cx='108' cy='377' rx='4.5' ry='1' transform='rotate(18 108 377)'/><ellipse cx='217' cy='390' rx='1.6' ry='2' transform='rotate(88 217 390)'/><ellipse cx='377' cy='490' rx='1.2' ry='1' transform='rotate(124 377 490)'/></svg>");color:var(--black)}
+.on-paper{background:var(--paper);color:var(--black)}
+section{padding:clamp(3.5rem,8vw,6.5rem) 0}
+.hero{padding-top:clamp(2rem,5vw,4.5rem)}
+.lede{font-size:1.3rem;max-width:44ch;margin-top:1.2rem}
+
+/* services */
+.services .head{margin-bottom:2.8rem}
+.trio{display:grid;grid-template-columns:1fr;border-top:5px solid var(--black)}
+@media(min-width:900px){.trio{grid-template-columns:repeat(3,1fr)}.trio>article+article{border-left:5px solid var(--black)}.trio>article{padding:2rem 1.8rem 0}.trio>article:first-child{padding-left:0}.trio>article:last-child{padding-right:0}}
+.trio>article{padding:1.8rem 0 2rem;border-bottom:5px solid var(--black)}
+@media(min-width:900px){.trio>article{border-bottom:0}}
+.trio h3{font-size:2.9rem;margin-bottom:.6rem}
+.trio ul{margin:1rem 0 1.6rem;padding-left:1.2rem}
+.trio li{margin-bottom:.45rem}
+.trio .fit{font-weight:800}
+
+/* approach */
+.approach .grid{display:grid;gap:3rem;align-items:center}
+@media(min-width:900px){.approach .grid{grid-template-columns:1fr 1fr}}
+.tri svg{width:100%;max-width:440px;margin-inline:auto;display:block;overflow:visible}
+.tri .side{stroke:#8d8d88;stroke-width:9;stroke-linecap:round;fill:none;transition:stroke .2s}
+.tri .side.on{stroke:var(--yellow)}
+.tri text{font-family:var(--display);font-size:32px;letter-spacing:2px;fill:var(--paper);transition:fill .2s}
+.tri text.on{fill:var(--yellow)}
+.tabs{display:flex;flex-direction:column;gap:.5rem;margin-bottom:1.4rem}
+.tabs button{all:unset;cursor:pointer;font-family:var(--display);font-size:2.2rem;line-height:1.1;letter-spacing:.03em;padding:.35rem .8rem .2rem;border-left:6px solid var(--line);color:#a9a9a4}
+.tabs button:hover{color:var(--paper)}
+.tabs button[aria-selected="true"]{color:var(--yellow);border-left-color:var(--yellow)}
+.tabs button:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
+.tabpanel{min-height:8.5rem;font-size:1.25rem;max-width:36ch}
+
+/* mission */
+.mission blockquote{margin:0;font-family:var(--body);font-weight:800;font-size:clamp(1.7rem,3.6vw,2.9rem);line-height:1.2;max-width:24em}
+.mission em{font-style:normal;background:var(--black);color:var(--yellow);padding:0 .25em}
+
+/* process */
+.steps{list-style:none;margin:2.4rem 0 0;padding:0;display:grid;gap:0;counter-reset:s}
+.steps li{display:grid;grid-template-columns:4.2rem 1fr;gap:1rem;padding:1.4rem 0;border-top:3px solid var(--black);counter-increment:s}
+.steps li::before{content:counter(s);font-family:var(--brush);font-size:3rem;line-height:1;color:var(--black)}
+.steps h3{margin-bottom:.3rem}
+.steps p{margin:0;max-width:52ch}
+@media(min-width:900px){.steps{grid-template-columns:repeat(4,1fr);gap:1.6rem}.steps li{display:block;border-top:5px solid var(--black)}.steps li::before{display:block;margin-bottom:.5rem}}
+
+/* guide */
+.guide .grid{display:grid;gap:3rem}
+@media(min-width:900px){.guide .grid{grid-template-columns:5fr 7fr}}
+details{border-top:3px solid var(--line);padding:0}
+details:last-of-type{border-bottom:3px solid var(--line)}
+summary{list-style:none;cursor:pointer;font-family:var(--brush);font-size:1.6rem;padding:1rem 2.6rem 1rem 0;position:relative;color:var(--paper)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";position:absolute;right:.3rem;top:50%;transform:translateY(-52%);font-family:var(--display);font-size:2.4rem;color:var(--yellow);transition:transform .2s}
+details[open] summary{color:var(--yellow)}
+details[open] summary::after{content:"\2212"}
+details .body{padding:0 0 1.4rem;max-width:56ch;font-style:italic}
+details .traits{display:flex;flex-wrap:wrap;gap:.5rem;margin:1rem 0 0;padding:0;list-style:none;font-style:normal}
+details .traits li{font-family:var(--brush);border:3px solid var(--yellow);color:var(--yellow);padding:.1rem .8rem}
+
+/* coach */
+.coach .grid{display:grid;gap:2.5rem;align-items:center}
+@media(min-width:800px){.coach .grid{grid-template-columns:360px 1fr;gap:4rem}}
+.coach figure{margin:0;border:5px solid var(--black);border-radius:28px;overflow:hidden;max-width:360px;background:var(--black)}
+.coach figcaption{background:var(--black);color:var(--yellow);font-family:var(--brush);font-size:1.5rem;text-align:center;padding:.5rem}
+.coach h2{margin-bottom:1rem}
+
+/* contact */
+.contact .grid{display:grid;gap:3rem}
+@media(min-width:900px){.contact .grid{grid-template-columns:5fr 6fr}}
+form{display:grid;gap:1.2rem}
+label,legend{font-family:var(--display);font-size:1.4rem;letter-spacing:.05em;color:var(--yellow);padding:0}
+input[type=text],input[type=email],textarea{width:100%;font:inherit;color:var(--paper);background:var(--coal);border:3px solid var(--line);padding:.7rem .9rem;border-radius:0}
+input[type=text]:focus,input[type=email]:focus,textarea:focus{border-color:var(--yellow);outline:none}
+textarea{min-height:9rem;resize:vertical}
+fieldset{border:0;margin:0;padding:0}
+.checks{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.4rem}
+.checks label{font-family:var(--body);font-size:1.05rem;letter-spacing:0;color:var(--paper);cursor:pointer}
+.checks input{position:absolute;opacity:0;pointer-events:none}
+.checks span{display:inline-block;border:3px solid var(--line);padding:.35rem 1rem}
+.checks input:checked + span{background:var(--yellow);border-color:var(--yellow);color:var(--black);font-weight:800}
+.checks input:focus-visible + span{outline:3px solid var(--yellow);outline-offset:3px}
+.status{min-height:1.6em;font-weight:600;margin:0}
+.status.err{color:#ff8a7a}
+
+footer{border-top:3px solid var(--yellow);padding:2.4rem 0}
+footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1.2rem}
+footer img{height:64px;width:auto}
+footer p{margin:0;font-size:1rem;color:#c9c9c4}
+
+/* work */
+.on-paper .btn{background:var(--black);border-color:var(--black);color:var(--yellow)}
+.on-paper .btn:hover{background:transparent;color:var(--black)}
+.work .head{margin-bottom:2rem}
+.case{display:grid;gap:2.6rem;padding:3.2rem 0;border-top:5px solid var(--black);align-items:center}
+@media(min-width:960px){.case{grid-template-columns:6fr 5fr;gap:4rem}.case.flip .mock-wrap{order:2}}
+.mock-wrap{min-width:0}
+.mock{background:var(--black);color:var(--paper);border:4px solid var(--black);box-shadow:10px 10px 0 var(--yellow);overflow:hidden}
+.mock-bar{background:#262626;padding:.55rem .9rem;display:flex;align-items:center;gap:.8rem;font-size:.9rem;color:#c9c9c4}
+.mock-bar .url{flex:1;background:#0d0d0d;border-radius:99px;padding:.15rem .9rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mock-nav{display:flex;flex-wrap:wrap;gap:1.1rem;padding:.8rem 1.4rem;border-bottom:2px solid var(--line);font-family:var(--display);font-size:1.05rem;letter-spacing:.06em;color:#c9c9c4}
+.mock-nav b{font-weight:400;color:var(--yellow);margin-right:auto}
+.mock-body{padding:clamp(1.4rem,4vw,2.4rem)}
+.mock-body .kick{font-size:.95rem;color:#c9c9c4;margin:0 0 .6rem}
+.mock-body h4{margin:0 0 1.2rem;font-family:var(--brush);font-weight:400;font-size:clamp(1.9rem,4.4vw,3rem);line-height:1.02;color:var(--yellow);text-transform:uppercase}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:.8rem;margin:0 0 1.4rem;padding:0;list-style:none}
+.facts li{border-left:5px solid var(--yellow);padding:.1rem 0 .1rem .8rem;line-height:1.15}
+.facts strong{display:block;font-family:var(--display);font-weight:400;font-size:1.9rem;letter-spacing:.03em}
+.facts span{font-size:.95rem;color:#c9c9c4}
+.mock-btns{display:flex;flex-wrap:wrap;gap:.6rem}
+.mock-btns i{font-style:normal;font-family:var(--display);letter-spacing:.06em;font-size:1.15rem;padding:.3rem .9rem .15rem;border:3px solid var(--yellow)}
+.mock-btns i:first-child{background:var(--yellow);color:var(--black)}
+.note{font-size:.95rem;color:var(--slate);margin:1.4rem 0 0}
+.case h3{font-size:clamp(2.8rem,6vw,4.2rem);margin:.4rem 0 .8rem}
+.chip{display:inline-block;border:3px solid var(--black);padding:0 .8rem;font-family:var(--brush);font-size:1.05rem}
+.case h4{font-size:1.2rem;font-weight:800;margin:1.4rem 0 .4rem}
+.case ul{margin:.4rem 0 1.6rem;padding-left:1.2rem}
+.case li{margin-bottom:.5rem}
+.case .lead{font-size:1.3rem;font-weight:600;max-width:34ch;margin:0}
+.chain{list-style:none;margin:1.8rem 0 0;padding:0;display:grid;gap:1.6rem}
+@media(min-width:800px){.chain{grid-template-columns:repeat(3,1fr);gap:2.6rem}}
+.chain li{position:relative;border:4px solid var(--black);padding:1.1rem 1.2rem;font-weight:800;line-height:1.3;background:var(--yellow)}
+.chain li:not(:last-child)::after{content:"";position:absolute;left:50%;bottom:-1.5rem;width:0;height:0;border:.75rem solid transparent;border-top:.8rem solid var(--black);border-bottom:0;transform:translateX(-50%)}
+@media(min-width:800px){.chain li:not(:last-child)::after{left:auto;right:-1.7rem;top:50%;bottom:auto;transform:translateY(-50%);border:.75rem solid transparent;border-left:.8rem solid var(--black);border-right:0}}
+.together{border-top:5px solid var(--black);padding-top:2.4rem}
+.together p{max-width:56ch;font-size:1.2rem;margin:.8rem 0 0}
+
+/* results */
+.results .head{margin-bottom:1rem}
+.rcase{padding:3.2rem 0;border-top:5px solid var(--black)}
+.rcase .chips{display:flex;flex-wrap:wrap;gap:.5rem;margin-bottom:.6rem}
+.rcase .chip{border-color:var(--black)}
+.rcase h3{font-size:clamp(2.8rem,6vw,4.2rem);margin:.2rem 0 .3rem}
+.rcase .tag{font-family:var(--brush);font-size:clamp(1.4rem,3vw,2rem);margin:0 0 1.4rem}
+.rcols{display:grid;gap:2rem}
+@media(min-width:900px){.rcols{grid-template-columns:1fr 1fr;gap:3.5rem}}
+.rcase h4{font-size:1.2rem;font-weight:800;margin:1.4rem 0 .4rem}
+.rcase h4:first-child{margin-top:0}
+.rcase ul.plain{margin:.4rem 0 1rem;padding-left:1.2rem}
+.rcase ul.plain li{margin-bottom:.45rem}
+.bignums{list-style:none;margin:2rem 0 0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1.4rem 1.2rem}
+.bignums li{border-left:6px solid var(--black);padding-left:.9rem;line-height:1.15}
+.bignums strong{display:block;font-family:var(--display);font-weight:400;font-size:clamp(2.8rem,6vw,4.2rem);line-height:.95}
+.bignums span{font-size:1rem;font-weight:600}
+.chart{margin-top:2.4rem}
+.chart h4{margin:0 0 .9rem}
+.bars{list-style:none;margin:0;padding:0;display:grid;gap:.7rem}
+.bars li{display:grid;grid-template-columns:6.8rem 1fr 3.6rem;align-items:center;gap:.8rem;font-weight:600}
+@media(min-width:600px){.bars li{grid-template-columns:9rem 1fr 4rem}}
+.bars .val{font-family:var(--display);font-weight:400;font-size:1.5rem;text-align:right;line-height:1}
+.track{display:flex;height:24px;background:rgba(0,0,0,.14)}
+.fill{display:block;height:100%;background:var(--black)}
+.fill.alt{background:repeating-linear-gradient(135deg,var(--black) 0 3px,transparent 3px 7px)}
+.legend{display:flex;flex-wrap:wrap;gap:1.2rem;margin:.9rem 0 0;padding:0;list-style:none;font-size:.95rem;font-weight:600}
+.legend i{display:inline-block;width:1.1rem;height:.9rem;background:var(--black);margin-right:.4rem;vertical-align:-1px}
+.legend i.alt{background:repeating-linear-gradient(135deg,var(--black) 0 3px,transparent 3px 7px)}
+.months{display:grid;grid-template-columns:repeat(5,1fr);gap:.5rem}
+.m{text-align:center;line-height:1.1}
+.col{position:relative;height:190px}
+.col::after{content:"";position:absolute;left:0;right:0;bottom:30%;height:3px;background:var(--black)}
+.bar{position:absolute;left:16%;right:16%;background:var(--black)}
+.bar.up{bottom:30%;height:var(--h)}
+.bar.down{top:70%;height:var(--h);background:repeating-linear-gradient(135deg,var(--black) 0 3px,transparent 3px 7px);border:3px solid var(--black)}
+.m strong{display:block;font-family:var(--display);font-weight:400;font-size:1.5rem;margin-top:.5rem}
+.m span{font-weight:600;font-size:.95rem}
+.takeaway{margin-top:2.2rem;font-size:1.25rem;font-weight:800;max-width:40ch;line-height:1.3}
+.motto{font-family:var(--brush);font-size:clamp(1.6rem,4.2vw,2.8rem);line-height:1.1;margin:1.6rem 0 0;text-transform:uppercase}
+.system{background:var(--black);color:var(--paper);padding:clamp(1.8rem,5vw,3.2rem);margin-top:1rem}
+.system h3{color:var(--yellow);font-size:clamp(2.4rem,5vw,3.6rem);margin-bottom:1rem}
+.system .pair{display:grid;gap:1rem;margin:1rem 0 1.6rem}
+@media(min-width:800px){.system .pair{grid-template-columns:1fr 1fr;gap:2rem}}
+.system .pair div{border-left:6px solid var(--yellow);padding-left:1rem}
+.system .pair strong{display:block;font-family:var(--display);font-weight:400;font-size:1.8rem;letter-spacing:.03em;color:var(--yellow)}
+.system ul{margin:0 0 1.6rem;padding-left:1.2rem;max-width:52ch}
+.system li{margin-bottom:.4rem}
+.system .close{font-family:var(--brush);font-size:clamp(1.4rem,3vw,2rem);color:var(--yellow);margin:0;line-height:1.2}
+.system .close b{font-weight:400;text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:5px}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a href="#top" aria-label="Big Ideas Branding, back to top"><img src="assets/logo.png" alt="Big Ideas Branding logo"></a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">Our work</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#approach">Our approach</a></li>
+        <li><a href="#process">How it works</a></li>
+        <li><a href="#guide">Free guide</a></li>
+        <li><a href="#candace">Candace</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="#contact">Start a project</a>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <div class="hero-copy">
+      <img class="mark" src="assets/logo.png" alt="">
+      <p>Social media strategy, logos, graphics, websites and small business solutions. Built around YOU.</p>
+      <div class="actions">
+        <a class="btn" href="#contact">Start your project</a>
+        <a class="btn ghost" href="#services">See what we do</a>
+      </div>
+    </div>
+    <h1 class="stack" id="hero-title" aria-label="Big ideas. Big results. Big personalities.">
+      <span class="b" aria-hidden="true">Big</span>
+      <span class="w1" aria-hidden="true">Ideas</span>
+      <span class="b" aria-hidden="true">Big</span>
+      <span class="w2" aria-hidden="true">Results</span>
+      <span class="b" aria-hidden="true">Big</span>
+      <span class="w3" aria-hidden="true">Personalities</span>
+    </h1>
+  </div>
+</section>
+
+<section class="services on-yellow" id="services" aria-labelledby="services-title">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="services-title">Pick your starting point</h2>
+      <p class="lede">Most clients come in for one thing. The best part? It usually grows. Start where the pain is loudest.</p>
+    </div>
+    <div class="trio">
+      <article>
+        <h3>Social media</h3>
+        <p>Stop guessing what to post. Get a plan, a voice and content that sounds like you.</p>
+        <ul>
+          <li>Strategy and a monthly content calendar</li>
+          <li>Captions with real hooks and a clear call to action</li>
+          <li>Graphics and short video direction</li>
+          <li>Instagram and Facebook tune-ups</li>
+        </ul>
+        <p class="fit">Best for owners who post when they have time and want it to actually work.</p>
+        <a class="btn" href="#contact" data-need="Social media">Ask about social media</a>
+      </article>
+      <article>
+        <h3>Branding</h3>
+        <p>A brand is more than a logo. It is how people feel when they meet you.</p>
+        <ul>
+          <li>Logo design</li>
+          <li>Colors, fonts and brand voice</li>
+          <li>Mission and vision statements</li>
+          <li>Graphics kit for print and social</li>
+        </ul>
+        <p class="fit">Best for new businesses, and older ones that outgrew their look.</p>
+        <a class="btn" href="#contact" data-need="Branding">Ask about branding</a>
+      </article>
+      <article>
+        <h3>Websites</h3>
+        <p>Your website should work while you sleep. Clear, fast and built to be found.</p>
+        <ul>
+          <li>Website refresh: audit, competitors, SEO and brand assets</li>
+          <li>New site builds</li>
+          <li>Local SEO</li>
+          <li>Booking and small business tools</li>
+        </ul>
+        <p class="fit">Best for businesses with a site that looks fine but does not bring in customers.</p>
+        <a class="btn" href="#contact" data-need="Website">Ask about websites</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="work on-paper" id="work" aria-labelledby="work-title">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="work-title">Our work</h2>
+      <p class="lede">Two Alaska brands. One small town. Here is how we built visibility for both.</p>
+    </div>
+
+    <article class="case" aria-labelledby="wbs-title">
+      <div class="mock-wrap">
+        <div class="mock" role="img" aria-label="Layout sketch of the Wild Bear Safari homepage showing the headline The Alaskan Adventure and quick facts">
+          <div class="mock-bar"><span class="url">wildbearsafari.com</span></div>
+          <div class="mock-nav"><b>Wild Bear Safari</b><span>Quick Facts</span><span>Your Guides</span><span>What to Expect</span><span>Book Now</span></div>
+          <div class="mock-body">
+            <p class="kick">Hoonah, Alaska</p>
+            <h4>The Alaskan adventure</h4>
+            <ul class="facts">
+              <li><strong>$145</strong><span>per person</span></li>
+              <li><strong>3 hours</strong><span>bear sightings very likely</span></li>
+              <li><strong>Max 10</strong><span>guests per guide</span></li>
+            </ul>
+            <div class="mock-btns"><i>Book now</i></div>
+          </div>
+        </div>
+        <p class="note">Real copy from the live site, shown as a layout sketch.</p>
+      </div>
+      <div>
+        <span class="chip">Creative direction</span>
+        <h3 id="wbs-title">Wild Bear Safari</h3>
+        <p class="lead">Small-group brown bear tours in Hoonah, Alaska. Land-based. Family-friendly. Unforgettable.</p>
+        <h4>The challenge</h4>
+        <p>Wild Bear Safari is an independent operator. Guests will not find it in the cruise line's excursion hub. So it has to be easy to find everywhere else.</p>
+        <h4>What we did</h4>
+        <ul>
+          <li>Audited visibility on Viator, GetYourGuide, TripAdvisor and Google Business Profile, then wrote the fix plan</li>
+          <li>Built a 90 day content calendar for the 2026 season</li>
+          <li>Prepared logo files for vinyl cutting</li>
+          <li>Set up a competitor research framework</li>
+          <li>Cleaned up site details, like a misspelled Hoonah in the social sharing tag</li>
+        </ul>
+        <a class="btn" href="https://wildbearsafari.com" target="_blank" rel="noopener">Visit wildbearsafari.com</a>
+      </div>
+    </article>
+
+    <article class="case flip" aria-labelledby="hos-title">
+      <div class="mock-wrap">
+        <div class="mock" role="img" aria-label="Layout sketch of the Hoonah Off Ship homepage showing the headline Real Alaska is a 30 minute walk from your ship">
+          <div class="mock-bar"><span class="url">hoonahoffship.com</span></div>
+          <div class="mock-nav"><b>Hoonah Off Ship</b><span>The walk</span><span>Your day</span><span>Directory</span><span>Questions</span></div>
+          <div class="mock-body">
+            <p class="kick">Hoonah, Alaska. Pop. 850. One road in.</p>
+            <h4>Real Alaska is a 30 minute walk from your ship.</h4>
+            <ul class="facts">
+              <li><strong>1.5 mi</strong><span>dock to downtown</span></li>
+              <li><strong>30 to 40</strong><span>minutes on foot</span></li>
+              <li><strong>Flat</strong><span>the whole way</span></li>
+            </ul>
+            <div class="mock-btns"><i>Build your day</i><i>See the walk</i></div>
+          </div>
+        </div>
+        <p class="note">Real copy from the live site, shown as a layout sketch.</p>
+      </div>
+      <div>
+        <span class="chip">Our own venture</span>
+        <h3 id="hos-title">Hoonah Off Ship</h3>
+        <p class="lead">A locally run guide to Hoonah, Alaska. Real places. Real people. Real Alaska.</p>
+        <h4>The challenge</h4>
+        <p>Most cruise passengers only see the port. The real town, and the small local businesses in it, sit a short walk away. Travelers needed one clear, trusted place to find them.</p>
+        <h4>What we built</h4>
+        <ul>
+          <li>An independent directory with four founding members: bear tours, whale watching, a village tour with crab feast, and a harborfront restaurant</li>
+          <li>A Build your day planner with three sample days</li>
+          <li>A walking and shuttle guide, plus pages for six cruise lines and each activity</li>
+          <li>Passenger questions, answered and written to be found in search</li>
+          <li>An inquiry form for local businesses that want a listing</li>
+        </ul>
+        <a class="btn" href="https://hoonahoffship.com" target="_blank" rel="noopener">Visit hoonahoffship.com</a>
+      </div>
+    </article>
+
+    <div class="together">
+      <h3>One system. Two sites.</h3>
+      <p>Hoonah Off Ship introduces travelers to the town. Its Book direct button sends them to Wild Bear Safari with a tracking tag. So we can see what the directory sends over.</p>
+      <ol class="chain">
+        <li>A traveler finds Hoonah Off Ship</li>
+        <li>They plan a day and tap Book direct</li>
+        <li>They book on wildbearsafari.com</li>
+      </ol>
+      <p style="margin-top:2.2rem"><a class="btn" href="#contact">Start your project</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="results on-yellow" id="results" aria-labelledby="results-title">
+  <div class="wrap">
+    <div class="head">
+      <h2 id="results-title">The numbers behind the work</h2>
+      <p class="lede">Pretty is nice. Profitable is better. Here are two very different businesses and what the data says.</p>
+    </div>
+
+    <article class="rcase" aria-labelledby="rent-title">
+      <div class="chips"><span class="chip">Event rentals</span><span class="chip">Upstate South Carolina</span></div>
+      <h3 id="rent-title">A local event rental company</h3>
+      <p class="tag">Turning digital visibility into revenue growth.</p>
+      <div class="rcols">
+        <div>
+          <h4>The challenge</h4>
+          <p>Strong inventory. An established local business. But marketing was not tied closely enough to website traffic, customer inquiries and revenue. The goal was bigger than posting more. It was to build a system we could measure.</p>
+          <h4>What we did</h4>
+          <ul class="plain">
+            <li>Built website and SEO content around the categories people search and rent most: inflatables, tents, tables, catering equipment and dance floors</li>
+            <li>Created content for weddings, corporate events, seasonal events, planning questions and new inventory, so the website had more front doors than the homepage</li>
+            <li>Turned social media into part of the sales funnel: capture attention, show inventory, educate, create demand, drive people back to the website, and invite quote requests</li>
+            <li>Reviewed revenue, website activity, product interest and year over year performance together</li>
+          </ul>
+          <p style="font-size:.95rem;font-weight:600">Services: digital strategy, SEO, website optimization, content marketing, social media, sales analysis and conversion strategy.</p>
+        </div>
+        <div>
+          <h4>Revenue, January through August 2026</h4>
+          <ul class="bignums" style="margin-top:.6rem">
+            <li><strong>+13.8%</strong><span>revenue year over year</span></li>
+            <li><strong>$432,544</strong><span>applied revenue in 2026</span></li>
+            <li><strong>$380,001</strong><span>same period in 2025</span></li>
+            <li><strong>+$52,543</strong><span>added revenue</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <ul class="bignums">
+        <li><strong>+101%</strong><span>website users</span></li>
+        <li><strong>+86%</strong><span>website sessions</span></li>
+        <li><strong>+136%</strong><span>website clicks</span></li>
+        <li><strong>+82%</strong><span>form starts</span></li>
+        <li><strong>+18%</strong><span>completed form submissions</span></li>
+      </ul>
+
+      <div class="rcols chart">
+        <div>
+          <h4>Behind in January. Ahead by March.</h4>
+          <div class="months" role="group" aria-label="Monthly revenue change versus 2025">
+<div class="m"><div class="col" aria-hidden="true"><span class="bar down" style="--h:29.4%"></span></div><strong>-23.3%</strong><span>Jan</span></div>
+<div class="m"><div class="col" aria-hidden="true"><span class="bar down" style="--h:4.5%"></span></div><strong>-3.6%</strong><span>Feb</span></div>
+<div class="m"><div class="col" aria-hidden="true"><span class="bar up" style="--h:69.9%"></span></div><strong>+55.5%</strong><span>Mar</span></div>
+<div class="m"><div class="col" aria-hidden="true"><span class="bar up" style="--h:21.0%"></span></div><strong>+16.7%</strong><span>Apr</span></div>
+<div class="m"><div class="col" aria-hidden="true"><span class="bar up" style="--h:30.7%"></span></div><strong>+24.4%</strong><span>May</span></div>
+          </div>
+          <p style="margin-top:1rem;font-size:.95rem;font-weight:600">January through May revenue rose from about $221,375 in 2025 to $261,422 in 2026. That is up about 18.1%.</p>
+        </div>
+        <div>
+          <h4>Where demand grew: product page traffic</h4>
+          <ul class="bars">
+<li><span>Inflatables</span><span class="track" aria-hidden="true"><span class="fill" style="width:100%"></span></span><span class="val">+126%</span></li>
+<li><span>Tents</span><span class="track" aria-hidden="true"><span class="fill" style="width:67.5%"></span></span><span class="val">+85%</span></li>
+<li><span>Tables</span><span class="track" aria-hidden="true"><span class="fill" style="width:55.6%"></span></span><span class="val">+70%</span></li>
+<li><span>Catering equipment</span><span class="track" aria-hidden="true"><span class="fill" style="width:37.3%"></span></span><span class="val">+47%</span></li>
+<li><span>Dance floors</span><span class="track" aria-hidden="true"><span class="fill" style="width:15.1%"></span></span><span class="val">+19%</span></li>
+          </ul>
+          <p style="margin-top:1rem;font-size:.95rem;font-weight:600">Inside inflatables, sessions rose 154%, active users 265% and new users 500%.</p>
+        </div>
+      </div>
+      <p class="takeaway">Traffic alone does not pay the bills. Visitors, form starts, product page traffic and revenue all rose together. Next up: turning more of those visitors into customers.</p>
+    </article>
+
+    <article class="rcase" aria-labelledby="tour-title">
+      <div class="chips"><span class="chip">Tourism and shore excursions</span><span class="chip">Remote Alaska</span></div>
+      <h3 id="tour-title">An independent Alaska tour company</h3>
+      <p class="tag">Be known before the ship docks.</p>
+      <div class="rcols">
+        <div>
+          <h4>The challenge</h4>
+          <p>The customer is a cruise passenger with only a few hours in port. Our client competes with cruise-line excursions, big travel marketplaces, agencies and last-minute sellers. The goal: make the brand recognizable before anyone steps off the ship.</p>
+          <h4>What we did</h4>
+          <ul class="plain">
+            <li>Focused on travelers about 35 to 65+, and positioned the tour around what they want: wild Alaska, local knowledge, small groups and brown bears</li>
+            <li>Turned real tour moments into short-form video, then put paid budget behind the best performers</li>
+            <li>Built marketing around how cruise tourism really works: ship calendars, dock time, seasonal wildlife and tour availability</li>
+            <li>Pushed direct booking through the website and direct message calls to action</li>
+            <li>Wrote content that answers the questions travelers ask before they arrive, so search engines and AI tools can find and recommend the company</li>
+            <li>Developed a personality-driven brand with a consistent voice, a brand character and merchandise concepts</li>
+          </ul>
+          <p style="font-size:.95rem;font-weight:600">Services: brand strategy, social media, paid advertising, SEO, content strategy, direct booking strategy, audience development and AI search optimization.</p>
+        </div>
+        <div>
+          <h4>One June campaign</h4>
+          <ul class="bignums" style="margin-top:.6rem">
+            <li><strong>6,152</strong><span>video and post views</span></li>
+            <li><strong>3,482</strong><span>accounts reached</span></li>
+            <li><strong>2,228</strong><span>interactions on one short video</span></li>
+          </ul>
+          <div class="chart" style="margin-top:1.8rem">
+            <h4>Paid and everything else</h4>
+            <ul class="bars">
+              <li><span>Views</span><span class="track" aria-hidden="true"><span class="fill" style="width:57.4%"></span><span class="fill alt" style="width:42.6%"></span></span><span class="val">6,152</span></li>
+              <li><span>Accounts reached</span><span class="track" aria-hidden="true"><span class="fill" style="width:80.4%"></span><span class="fill alt" style="width:19.6%"></span></span><span class="val">3,482</span></li>
+            </ul>
+            <ul class="legend"><li><i></i>Paid: 3,531 views, 2,800 accounts</li><li><i class="alt"></i>Organic and other</li></ul>
+          </div>
+        </div>
+      </div>
+      <div class="chart" style="margin-top:2.4rem">
+        <h4>Paid ads over about 2.5 months</h4>
+        <ul class="bignums" style="margin-top:.6rem">
+          <li><strong>$0.25</strong><span>average cost per landing page hit</span></li>
+          <li><strong>Nearly 2,000</strong><span>landing page hits</span></li>
+          <li><strong>30K</strong><span>views</span></li>
+        </ul>
+      </div>
+      <p class="motto">Search. Discover. Trust. Book direct.</p>
+      <p class="takeaway">Travelers now tell the company they found it through ChatGPT while planning their trip. That is why we write for AI search too. The question changed from "What should we post today?" to "Where is this traveler in the decision, and what moves them closer to booking?"</p>
+    </article>
+
+    <div class="system">
+      <h3>Two businesses. One marketing system.</h3>
+      <div class="pair">
+        <div><strong>Local rental company</strong>Upstate South Carolina. Event-driven demand. Website inquiries and rentals.</div>
+        <div><strong>Destination tour company</strong>Remote Alaska. Cruise-driven demand. Seasonal bookings.</div>
+      </div>
+      <p>The same philosophy worked for both:</p>
+      <ul>
+        <li>Understand how the customer searches</li>
+        <li>Create content around what the customer actually wants</li>
+        <li>Build visibility across more than one discovery channel</li>
+        <li>Send customers to a website or booking channel you own</li>
+        <li>Measure behavior, not vanity metrics</li>
+        <li>Connect marketing activity to business results</li>
+      </ul>
+      <p class="close">That is the difference between doing marketing and <b>building a marketing system.</b></p>
+      <p style="margin:1.8rem 0 0"><a class="btn" href="#contact">Start your project</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="approach" id="approach" aria-labelledby="approach-title">
+  <div class="wrap grid">
+    <div class="tri">
+      <svg viewBox="0 0 440 400" role="img" aria-label="A triangle with Big Ideas on the bottom, Big Results on the left and Big Personalities on the right">
+        <line class="side" data-k="ideas" x1="50" y1="340" x2="390" y2="340"/>
+        <line class="side" data-k="results" x1="50" y1="340" x2="220" y2="60"/>
+        <line class="side" data-k="people" x1="220" y1="60" x2="390" y2="340"/>
+        <text data-k="ideas" x="220" y="386" text-anchor="middle">Big ideas</text>
+        <text data-k="results" x="118" y="182" text-anchor="middle" transform="rotate(-58.7 118 182)" dy="-16">Big results</text>
+        <text data-k="people" x="322" y="182" text-anchor="middle" transform="rotate(58.7 322 182)" dy="-16">Big personalities</text>
+      </svg>
+    </div>
+    <div>
+      <h2 id="approach-title">Three things. Every project.</h2>
+      <div class="tabs" role="tablist" aria-label="Our approach">
+        <button role="tab" id="t-ideas" aria-selected="true" aria-controls="panel" data-k="ideas">Big ideas</button>
+        <button role="tab" id="t-results" aria-selected="false" aria-controls="panel" data-k="results" tabindex="-1">Big results</button>
+        <button role="tab" id="t-people" aria-selected="false" aria-controls="panel" data-k="people" tabindex="-1">Big personalities</button>
+      </div>
+      <div class="tabpanel" id="panel" role="tabpanel" aria-labelledby="t-ideas" tabindex="0"></div>
+    </div>
+  </div>
+</section>
+
+<section class="mission on-yellow" aria-label="Our promise">
+  <div class="wrap">
+    <blockquote>The most important part of your brand is <em>YOU</em>. An exciting people culture, powerful messaging, eye-catching media and proper execution is our standard.</blockquote>
+  </div>
+</section>
+
+<section class="process on-paper" id="process" aria-labelledby="process-title">
+  <div class="wrap">
+    <h2 id="process-title">How a project runs</h2>
+    <p class="lede">No mystery. No surprise invoices of confusion. Just four clear steps.</p>
+    <ol class="steps">
+      <li><div><h3>Listen</h3><p>We learn your story, your customers and what you want your business to feel like.</p></div></li>
+      <li><div><h3>Map</h3><p>We look at your competitors, your search presence and your brand assets. Then we write the plan.</p></div></li>
+      <li><div><h3>Build</h3><p>Logos, content, graphics or pages. You review it. We refine it until it feels like you.</p></div></li>
+      <li><div><h3>Launch</h3><p>We put it in the world and show you how to keep it going.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section class="guide" id="guide" aria-labelledby="guide-title">
+  <div class="wrap grid">
+    <div>
+      <h2 id="guide-title">Free guide: hire for great people culture</h2>
+      <p class="lede">It takes the right people to turn a big idea into big results. Three steps to get there.</p>
+    </div>
+    <div>
+      <details open>
+        <summary>Find the right people</summary>
+        <div class="body">
+          <p>Many people interview well. So how do you weed out the ones who will miss the mark? Look for people who bring equal parts effort, ability and desire. If one is missing, move on to the next candidate.</p>
+          <ul class="traits"><li>Desire</li><li>Ability</li><li>Effort</li></ul>
+        </div>
+      </details>
+      <details>
+        <summary>Clearly define important characteristics</summary>
+        <div class="body">
+          <p>Study your mission and vision statements. Which personality traits matter most? Are your interview questions aligned with them? Ask situational questions to see if a candidate will show the behaviors your brand stands for.</p>
+        </div>
+      </details>
+      <details>
+        <summary>Diagnose root causes</summary>
+        <div class="body">
+          <p>Teach managers to look for root causes, not symptoms. Say the staff keeps forgetting to clean one area. It has happened more than once, so it is a pattern. Stop cleaning up the mistake for them. It can only be one of three things: attitude, training or a broken system.</p>
+          <ul class="traits"><li>Attitude</li><li>Training</li><li>System</li></ul>
+        </div>
+      </details>
+      <p style="margin-top:1.6rem">Building the people side of your brand can feel confusing. Your people are the engine that drives your business. <a href="#contact" style="color:var(--yellow);font-weight:800">Let us help you.</a></p>
+    </div>
+  </div>
+</section>
+
+<section class="coach on-yellow" id="candace" aria-labelledby="coach-title">
+  <div class="wrap grid">
+    <figure>
+      <img src="assets/candace.jpg" alt="Candace Dillard smiling in a dark blazer" width="440" height="600">
+      <figcaption>Candace, Brand Coach</figcaption>
+    </figure>
+    <div>
+      <h2 id="coach-title">Meet your brand coach</h2>
+      <p class="lede">Candace Dillard leads Big Ideas Branding. She works with small business owners who have a big idea and need the brand, the plan and the team to match.</p>
+      <p class="lede">The truth is, you do not need more noise. You need a clear message and people who live it.</p>
+      <a class="btn" href="#contact">Talk with Candace</a>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap grid">
+    <div>
+      <h2 id="contact-title">Got a big idea? Tell us.</h2>
+      <p class="lede">Share a few details. We will reply and map out the best next step. Everything you want exists on the other side of fear.</p>
+    </div>
+    <form id="lead" novalidate>
+      <div>
+        <label for="name">Your name</label>
+        <input type="text" id="name" name="name" autocomplete="name" required>
+      </div>
+      <div>
+        <label for="email">Your email</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+      </div>
+      <div>
+        <label for="biz">Business name</label>
+        <input type="text" id="biz" name="biz" autocomplete="organization">
+      </div>
+      <fieldset>
+        <legend>What do you need?</legend>
+        <div class="checks">
+          <label><input type="checkbox" name="need" value="Social media"><span>Social media</span></label>
+          <label><input type="checkbox" name="need" value="Branding"><span>Branding</span></label>
+          <label><input type="checkbox" name="need" value="Website"><span>Website</span></label>
+          <label><input type="checkbox" name="need" value="People culture"><span>People culture</span></label>
+          <label><input type="checkbox" name="need" value="Not sure yet"><span>Not sure yet</span></label>
+        </div>
+      </fieldset>
+      <div>
+        <label for="idea">Tell us your big idea</label>
+        <textarea id="idea" name="idea"></textarea>
+      </div>
+      <button class="btn" type="submit">Send my big idea</button>
+      <p class="status" id="status" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/logo.png" alt="Big Ideas Branding">
+    <p>Social media strategy + logos + graphics + small business solutions<br><a href="https://www.bigideasbranding.com">bigideasbranding.com</a></p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  // Change this one line to the inbox that should receive project inquiries.
+  var CONTACT_EMAIL = "hello@bigideasbranding.com";
+
+  // Approach tabs and triangle
+  var copy = {
+    ideas: "Every brand starts with one. We help you shape yours into a clear concept people can repeat and remember.",
+    results: "An idea sitting on a shelf helps no one. We tie every post, page and logo to a result you can actually see.",
+    people: "Your brand is YOU, plus the people who carry it. We help you hire, train and lead a team that lives the idea."
+  };
+  var tabs = Array.prototype.slice.call(document.querySelectorAll('[role="tab"]'));
+  var panel = document.getElementById('panel');
+  var sides = document.querySelectorAll('.tri [data-k]');
+  function pick(k, focus){
+    tabs.forEach(function(t){
+      var on = t.dataset.k === k;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.tabIndex = on ? 0 : -1;
+      if(on){ panel.setAttribute('aria-labelledby', t.id); if(focus) t.focus(); }
+    });
+    panel.textContent = copy[k];
+    sides.forEach(function(s){ s.classList.toggle('on', s.dataset.k === k); });
+  }
+  tabs.forEach(function(t, i){
+    t.addEventListener('click', function(){ pick(t.dataset.k, false); });
+    t.addEventListener('keydown', function(e){
+      var n = null;
+      if(e.key === 'ArrowDown' || e.key === 'ArrowRight') n = tabs[(i+1) % tabs.length];
+      if(e.key === 'ArrowUp' || e.key === 'ArrowLeft') n = tabs[(i+tabs.length-1) % tabs.length];
+      if(n){ e.preventDefault(); pick(n.dataset.k, true); }
+    });
+  });
+  sides.forEach(function(s){ s.style.cursor = 'pointer'; s.addEventListener('click', function(){ pick(s.dataset.k, false); }); });
+  pick('ideas', false);
+
+  // Service buttons pre-select the matching need in the form
+  document.querySelectorAll('[data-need]').forEach(function(a){
+    a.addEventListener('click', function(){
+      document.querySelectorAll('input[name="need"]').forEach(function(c){ c.checked = (c.value === a.dataset.need); });
+    });
+  });
+
+  // Inquiry form opens the visitor's email app with everything filled in
+  var form = document.getElementById('lead');
+  var status = document.getElementById('status');
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = form.name.value.trim(), email = form.email.value.trim();
+    status.className = 'status';
+    if(!name || !/^\S+@\S+\.\S+$/.test(email)){
+      status.className = 'status err';
+      status.textContent = 'Add your name and a valid email so we can reply.';
+      (name ? form.email : form.name).focus();
+      return;
+    }
+    var needs = Array.prototype.map.call(form.querySelectorAll('input[name="need"]:checked'), function(c){ return c.value; });
+    var body = 'Name: ' + name + '\nEmail: ' + email + '\nBusiness: ' + (form.biz.value.trim() || 'Not shared') +
+      '\nNeeds: ' + (needs.join(', ') || 'Not sure yet') + '\n\nMy big idea:\n' + (form.idea.value.trim() || '');
+    window.location.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent('New project inquiry from ' + name) + '&body=' + encodeURIComponent(body);
+    status.textContent = 'Your email app is opening with your details. If nothing happens, email ' + CONTACT_EMAIL + ' directly.';
+  });
+})();
+</script>
+</body>
+</html>
