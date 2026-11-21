@@ -251,6 +251,14 @@ footer a{color:var(--black);font-weight:700}
 .system .pair div{border-left:6px solid var(--yellow);padding-left:1rem}
 .system .pair strong{display:block;font-family:var(--display);font-weight:400;font-size:1.8rem;letter-spacing:.03em;color:var(--yellow)}
 .system ul{margin:0 0 1.6rem;padding-left:1.2rem;max-width:52ch}
+.system .compare{display:grid;gap:.4rem;margin-bottom:.4rem}
+.system .compare .before{order:-1}
+@media(min-width:800px){.system .compare{grid-template-columns:1fr 1fr;gap:2rem}.system .compare .before{order:0}}
+.system .compare p{margin:0 0 1rem}
+.system .compare .before p{font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.system ul.pain{list-style:none;padding-left:0;color:rgba(255,255,255,.6)}
+.system ul.pain li{position:relative;padding-left:1.6rem}
+.system ul.pain li::before{content:"\2715";position:absolute;left:0;color:var(--yellow);font-weight:800}
 .system li{margin-bottom:.4rem}
 .system .close{font-family:var(--brush);font-size:clamp(1.4rem,3vw,2rem);color:var(--yellow);margin:0;line-height:1.2}
 .system .close b{font-weight:400;text-decoration:underline;text-decoration-thickness:4px;text-underline-offset:5px}
@@ -563,6 +571,8 @@ footer a{color:var(--black);font-weight:700}
         <div><strong>Local rental company</strong>Upstate South Carolina. Event-driven demand. Website inquiries and rentals.</div>
         <div><strong>Destination tour company</strong>Remote Alaska. Cruise-driven demand. Seasonal bookings.</div>
       </div>
+      <div class="compare">
+        <div>
       <p>The same philosophy worked for both:</p>
       <ul>
         <li>Understand how the customer searches</li>
@@ -572,6 +582,19 @@ footer a{color:var(--black);font-weight:700}
         <li>Measure behavior, not vanity metrics</li>
         <li>Connect marketing activity to business results</li>
       </ul>
+        </div>
+        <div class="before">
+          <p>Before the system:</p>
+          <ul class="pain">
+            <li>Guessing what customers were searching for</li>
+            <li>Posting just to post</li>
+            <li>Living on one platform and hoping it worked</li>
+            <li>Sending traffic to places they didn't own</li>
+            <li>Chasing likes that never became leads</li>
+            <li>No clear line between marketing and money</li>
+          </ul>
+        </div>
+      </div>
       <p class="close">That is the difference between doing marketing and <b>building a marketing system.</b></p>
       <p style="margin:1.8rem 0 0"><a class="btn" href="#contact">Start your project</a></p>
     </div>
