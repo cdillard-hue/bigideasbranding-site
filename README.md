@@ -4,8 +4,9 @@ Marketing site for Big Ideas Branding — social media strategy, branding and we
 
 ## Structure
 
-- `index.html` — the whole site, single page
-- `assets/` — logo and photo
+- `index.html` — the home page
+- `case-studies/` — full case study pages, linked from the home page
+- `assets/` — logo and photos (`assets/case-studies/<client>/` for case study images)
 
 ## Local preview
 
@@ -23,3 +24,4 @@ Static site, no build step. On Netlify: new site from Git, connect this repo, le
 
 - Contact form email: search `CONTACT_EMAIL` near the bottom of `index.html` and update the address.
 - Service copy, case studies and results numbers are plain HTML in the matching `<section>` blocks (`#services`, `#work`, `#results`).
+- Metabolism Mastered case study (`case-studies/metabolism-mastered.html`): HTML comments mark where to drop in the before/after screenshots, the two program logos, the Meet Bex video and a quote from Bex.
